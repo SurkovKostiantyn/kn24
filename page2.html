@@ -6,6 +6,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        span{
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -30,6 +35,7 @@
                         id="text"
                         name="text"
                         placeholder="Напиши тут текст"
+                        value="Вася"
                         maxlength="64"
                         minlength="2"
                         pattern="^[А-Яа-яA-Za-z'’\- ]+$"
@@ -65,16 +71,37 @@
                         name="password"
                         minlength="8"
                         maxlength="22"
-                ><br><br>
+                >
+                <span
+                    onmousedown="showPassword();"
+                    onmouseup="hidePassword();"
+                    onmouseleave="hidePassword();"
+                >
+                    &bigodot;
+                </span>
+                <br><br>
 
                 <label for="color">Обери колір: </label>
                 <input type="color" id="color" name="color"><br><br>
 
                 <label for="range">Обери значення діапазону (range): </label>
-                <input type="range" id="range" min="0" max="10" step="2" value="6" name="range"><br><br>
+                <input
+                        type="range"
+                        id="range"
+                        min="0"
+                        max="1000"
+                        step=""
+                        value="500"
+                        name="range"
+                ><br><br>
 
                 <label for="checkbox">Натисни галочку: </label>
-                <input type="checkbox" id="checkbox" name="checkbox" checked><br><br>
+                <input
+                        type="checkbox"
+                        id="checkbox"
+                        name="checkbox"
+                        checked
+                ><br><br>
 
                 <span>Обери пунктик: </span><br>
                 <label for="radio1">Пунктик A: </label>
@@ -85,27 +112,51 @@
                 <input type="radio" name="radio" id="radio3" value="C"><br><br>
 
                 <label for="date">Обери дату: </label>
-                <input type="date" id="date" name="date"><br><br>
+                <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        min="2000-01-01"
+                        max="2025-03-14"
+                        value="2025-03-14"
+                ><br><br>
 
                 <label for="datetime-local">Обери дату та час: </label>
-                <input type="datetime-local" id="datetime-local" name="datetime-local"><br><br>
+                <input
+                        type="datetime-local"
+                        id="datetime-local"
+                        name="datetime-local"
+                ><br><br>
+
+                <label for="week">Обери тиждень</label>
+                <input type="week" id="week" name="week"><br><br>
+
+                <label for="month">Обери місяць</label>
+                <input type="month" id="month" name="month"><br><br>
+
+                <label for="time">Обери час</label>
+                <input type="time" id="time" name="time"><br><br>
 
                 <label for="file">Обери файл: </label>
                 <input type="file" name="file" id="file"><br><br>
 
                 <label for="image">Це input типу "image": </label>
-                <input type="image" id="image" src="123.ico" alt="Submit" width="48" height="48"><br><br>
+                <input
+                        type="image"
+                        id="image"
+                        src="123.ico"
+                        alt="Submit"
+                        width="48"
+                        height="48"
+                ><br><br>
 
-                <label for="file">Обери файл: </label>
+                <label for="url">Введіть посилання на профіль: </label>
+                <input type="url" name="url" id="url"><br><br>
 
-                <label for="week"></label>
-                <input type="week" id="week" name="week">
-
-                <label for="month"></label>
-                <input type="month" id="month" name="month">
-
-
+                <input type="reset">
                 <input type="submit">
+
+
             </form>
         </article>
     </main>
@@ -113,5 +164,16 @@
         <br><br><br><br><br><br><br><br><br><br>
         Footer
     </footer>
+    <script>
+        let input = document.getElementById('password');
+
+        const showPassword = () => {
+            input.type = "text";
+        }
+
+        const hidePassword = () => {
+            input.type = "password";
+        }
+    </script>
 </body>
 </html>
