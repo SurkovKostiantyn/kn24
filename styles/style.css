@@ -1,0 +1,35 @@
+h2{
+    color: rgb(255,0,0);
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+}
+p{
+    margin: 10px auto;
+}
+
+.p_header{
+    text-align: center;
+    font-size: 24px;
+    color: coral;
+}
+
+#p1{
+    font-weight: bold;
+    color: cornflowerblue;
+}
+
+.text_green{
+    color: green;
+}
+
+.text_small{
+    font-size: 18px; /* Comment */
+}
+
+.text_nav{
+    border: 1px solid black;
+    padding: 2px;
+    background-color: aqua;
+}
