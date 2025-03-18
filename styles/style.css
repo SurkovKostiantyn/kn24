@@ -1,3 +1,25 @@
+body{
+    /*background-color: rgba(145, 204, 165, 0.54);*/
+    background-image: url("../images/Pikachu.webp"),url("../images/forest.jpg") ;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 50%, cover;
+    background-attachment: fixed, scroll;
+    background-position: center center;
+}
+
+article{
+    background-color: blanchedalmond;
+    opacity: 0.9;
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px;
+    border-style: solid;
+    border-color: green;
+    border-width: 10px;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
 h2{
     color: rgb(255,0,0);
     font-size: 48px;
@@ -26,6 +48,9 @@ p{
 
 .text_small{
     font-size: 18px; /* Comment */
+    background-color: beige;
+    padding: 2px;
+    box-sizing: border-box;
 }
 
 .text_nav{
