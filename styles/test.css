@@ -1,0 +1,93 @@
+/* Скидання стилів для body */
+body {
+    margin: 0 auto; /* Центрування сторінки */
+    padding: 0; /* Видалення внутрішніх відступів */
+    width: 100%; /* Ширина на весь екран */
+    height: 100vh; /* Висота на весь екран */
+    color: beige; /* Колір тексту */
+    font-family: "Roboto Mono", monospace; /* Шрифт */
+}
+
+/* Основний контейнер */
+.main {
+    width: 80%; /* Ширина контейнера */
+    margin: 0 auto; /* Центрування */
+    background-color: coral; /* Фон контейнера */
+    padding: 20px; /* Відступи */
+}
+
+/* Скидання відступів для заголовків і параграфів */
+p, h1 {
+    margin: 0;
+}
+
+/* Стилізація заголовків h1 */
+h1 {
+    font-size: 30px; /* Розмір шрифту */
+    text-align: center; /* Вирівнювання по центру */
+    text-transform: uppercase; /* Усі літери великі */
+    font-weight: 700; /* Товщина шрифту */
+    line-height: 30px; /* Висота рядка */
+}
+
+/* Блоки div */
+.div {
+    margin-bottom: 40px; /* Відступ знизу */
+    padding: 10px; /* Внутрішні відступи */
+    border: 10px solid yellow; /* Жовта рамка */
+    outline: 10px solid lightblue; /* Зовнішня рамка */
+    box-sizing: border-box; /* Враховує бордери у розмір */
+}
+
+/* Стилі для параграфів */
+p {
+    font-weight: 200; /* Тонкий шрифт */
+    padding: 10px; /* Відступи */
+}
+
+/* Чорний фон для блоку */
+.bg_black {
+    background-color: black;
+    position: relative;
+}
+
+/* Синій блок із фіксацією на екрані */
+.bg_blue {
+    position: sticky;
+    top: 0;
+    background-color: blue;
+}
+
+/* Зелений блок зі статичною позицією */
+.bg_green {
+    position: static;
+    background-color: green;
+}
+
+/* Червоний блок, зафіксований по центру */
+.bg_red {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+}
+
+/* Стилізація кнопки */
+.btn {
+    color: aqua; /* Колір тексту */
+    text-decoration: none; /* Видалення підкреслення */
+    font-family: "Playwrite HU", cursive; /* Стиль шрифту */
+    position: absolute; /* Абсолютне позиціювання */
+    right: 10px; /* Відступ справа */
+    bottom: 10px; /* Відступ знизу */
+    padding: 4px 6px; /* Відступи */
+    border: 2px solid aqua; /* Рамка */
+    border-radius: 12px; /* Закруглені кути */
+}
+
+/* Ефект при наведенні на кнопку */
+.btn:hover {
+    color: black; /* Зміна кольору тексту */
+    background-color: aqua; /* Зміна фону */
+}
