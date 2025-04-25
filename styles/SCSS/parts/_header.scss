@@ -1,0 +1,54 @@
+@use "sass:color";
+// Імпортуємо змінні та міксини
+@import '../common/variables'; // кольори, шрифти, відступи
+@import '../common/mixins';    // flex-center, respond-to, transition тощо
+
+header {
+  width: 100%;
+  margin: 0 auto;
+  background-color: $primary-color;           // фон — основний синій колір
+
+  color: #fff;                                // білий текст
+  text-align: center;                         // вирівнювання тексту по центру
+
+  h1 {
+    font-family: $font-family-base;           // базовий шрифт
+    font-size: $font-size-base * 2;           // великий розмір шрифту
+    font-weight: $heading-font-weight;        // жирний шрифт
+    margin-top: $spacing-unit;                // відступ зверху
+    margin-bottom: $spacing-unit;             // відступ знизу
+  }
+
+  nav {
+    margin: 10px auto;
+    width: 100%;
+    max-width: 1200px;                          // обмежуємо ширину вмісту// стилі для <header>
+
+    @include flex-row;
+
+    flex-wrap: nowrap;
+
+    ul {
+      @include flex-center;                   // горизонтальне вирівнювання списку
+
+      li {
+        a {
+          color: #fff;                        // білий текст
+          font-weight: $body-font-weight;     // стандартна товщина
+          @include transition(color);         // плавний перехід кольору
+
+          &:hover {
+            color: color.scale($primary-color, $lightness: 30%); // світліший при наведенні
+          }
+        }
+      }
+    }
+  }
+
+  img {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;                          // обмежуємо ширину вмісту// стилі для <header>
+    height: auto;                             // автоматична висота
+  }
+}

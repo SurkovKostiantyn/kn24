@@ -1,0 +1,37 @@
+@use "sass:color";
+// Імпортуємо змінні та міксини
+@import '../common/variables';  // кольори, типографіка, брейкпойнти
+@import '../common/mixins';     // flex-center, respond-to, transition тощо
+
+
+main {
+  width: 100%;
+  max-width: 1200px;                      // обмежуємо ширину вмісту
+
+  margin: 0 auto;                         // центруємо main на сторінці
+
+  @include flex-column(10px);
+
+  justify-content: center;
+
+  section {
+    padding: $gutter-width;             // внутрішній відступ
+    background-color: $background-color; // світлий фон блоку
+    width: 100%;
+    box-sizing: border-box;
+    @include transition(background-color);    // плавна зміна фону при hover
+
+    h2 {
+      font-size: $font-size-base * 1.5;     // збільшений заголовок
+      font-weight: $heading-font-weight;    // жирний
+      color: $primary-color;                // основний колір
+      margin-bottom: $spacing-unit;         // відступ під заголовком
+    }
+
+    p {
+      font-size: $font-size-base;           // звичайний розмір тексту
+      color: $text-color;                   // темний текст
+      line-height: 1.6;                     // комфортний міжрядковий інтервал
+    }
+  }
+}

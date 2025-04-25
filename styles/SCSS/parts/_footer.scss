@@ -1,0 +1,13 @@
+@use "sass:color";
+// Імпортуємо змінні та міксини
+@import '../common/variables'; // кольори, відступи, типографіка
+@import '../common/mixins';    // clearfix, flex-center, respond-to тощо
+
+footer {                                     // стиль для <footer>
+  @include flex-center;                      // вмикаємо flex і центруємо контент
+  background-color: $secondary-color;        // фон футеру — допоміжний зелений
+  color: #fff;                               // білий колір тексту
+  padding: $gutter-width $spacing-unit;      // вертикальні та горизонтальні відступи
+  text-align: center;                        // вирівнювання тексту по центру
+  font-family: $font-family-base;            // базовий шрифт сайта
+}

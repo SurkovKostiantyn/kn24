@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<header class="header">
+    <nav>
+        <ul>
+            <li><a class="button" href="index.html">ГОЛОВНА</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <img src="images/banners/banner1.jpg" alt="banner" title="banner" />
+    </div>
+
+    <h1>Heading level 1</h1>
+</header>
+
+<main class="flex justify-center items-center">
+    <form class="bg-white p-8 rounded-xl shadow-md w-full max-w-sm">
+        <h2 class="text-2xl font-semibold mb-6 text-center">Вхід до системи</h2>
+
+        <label class="block mb-4">
+            <span class="text-gray-700">Email</span>
+            <input type="email" name="email" required
+                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-200 focus:outline-none" />
+        </label>
+
+        <label class="block mb-6">
+            <span class="text-gray-700">Пароль</span>
+            <input type="password" name="password" required
+                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-200 focus:outline-none" />
+        </label>
+
+        <button type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition duration-200">
+            Увійти
+        </button>
+    </form>
+</main>
+
+<footer>
+    <p>FOOTER</p>
+</footer>
+
+</body>
+</html>

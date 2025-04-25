@@ -1,0 +1,42 @@
+// Міксин для clearfix — очищає float-контейнери
+@mixin clearfix {
+  &::after {            // Використовує псевдоелемент після контейнера
+    content: "";        // Порожній контент, щоб псевдоелемент з’явився
+    display: table;     // Блочний контейнер рівня table для розташування
+    clear: both;        // Очищає обтікання з обох боків
+  }
+}
+
+// Міксин для створення плавних переходів
+// Приймає властивість, тривалість та функцію згладжування
+@mixin transition($property, $duration: $transition-duration, $easing: $transition-easing) {
+  transition-property:    $property;   // Властивість(і), до яких застосувати перехід
+  transition-duration:    $duration;   // Довжина переходу
+  transition-timing-function: $easing; // Функція згладжування
+}
+
+// Міксин для центрування вмісту flex-контейнера
+// Використовується у блоках, де потрібно горизонтальне та вертикальне центрування
+@mixin flex-center {
+  display: flex;             // Вмикає flex-контейнер
+  justify-content: center;   // Центрування по горизонталі
+  align-items: center;       // Центрування по вертикалі
+}
+// Цей міксин також підтримує змінний розмір відступу (gap),
+@mixin flex-column($gap: 10px) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+// Міксин для частотного масштабування шрифту
+// Приймає множник, який множить базовий розмір шрифту
+@mixin font-scale($multiplier) {
+  font-size: $font-size-base * $multiplier; // Обчислює розмір шрифту
+}
+
