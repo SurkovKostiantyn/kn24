@@ -1,7 +1,7 @@
 @use "sass:color";
 // Імпортуємо змінні та міксини
-@use '../common/variables';  // кольори, типографіка, брейкпойнти
-@use '../common/mixins';     // flex-center, respond-to, transition тощо
+@use '../common/variables' as v;  // кольори, типографіка, брейкпойнти
+@use '../common/mixins' as m;     // flex-center, respond-to, transition тощо
 
 
 main {
@@ -10,27 +10,27 @@ main {
 
   margin: 0 auto;                         // центруємо main на сторінці
 
-  @include flex-column(10px);
+  @include m.flex-column(10px);
 
   justify-content: center;
 
   section {
-    padding: $gutter-width;             // внутрішній відступ
-    background-color: $background-color; // світлий фон блоку
+    padding: v.$gutter-width;             // внутрішній відступ
+    background-color: v.$background-color; // світлий фон блоку
     width: 100%;
     box-sizing: border-box;
-    @include transition(background-color);    // плавна зміна фону при hover
+
 
     h2 {
-      font-size: $font-size-base * 1.5;     // збільшений заголовок
-      font-weight: $heading-font-weight;    // жирний
-      color: $primary-color;                // основний колір
-      margin-bottom: $spacing-unit;         // відступ під заголовком
+      font-size: v.$font-size-base * 1.5;     // збільшений заголовок
+      font-weight: v.$heading-font-weight;    // жирний
+      color: v.$primary-color;                // основний колір
+      margin-bottom: v.$spacing-unit;         // відступ під заголовком
     }
 
     p {
-      font-size: $font-size-base;           // звичайний розмір тексту
-      color: $text-color;                   // темний текст
+      font-size: v.$font-size-base;           // звичайний розмір тексту
+      color: v.$text-color;                   // темний текст
       line-height: 1.6;                     // комфортний міжрядковий інтервал
     }
   }

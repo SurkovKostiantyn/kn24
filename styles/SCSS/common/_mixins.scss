@@ -7,14 +7,6 @@
   }
 }
 
-// Міксин для створення плавних переходів
-// Приймає властивість, тривалість та функцію згладжування
-@mixin transition($property, $duration: $transition-duration, $easing: $transition-easing) {
-  transition-property:    $property;   // Властивість(і), до яких застосувати перехід
-  transition-duration:    $duration;   // Довжина переходу
-  transition-timing-function: $easing; // Функція згладжування
-}
-
 // Міксин для центрування вмісту flex-контейнера
 // Використовується у блоках, де потрібно горизонтальне та вертикальне центрування
 @mixin flex-center {

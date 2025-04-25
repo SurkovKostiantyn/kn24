@@ -1,22 +1,22 @@
 @use "sass:color";
 // Імпортуємо змінні та міксини
-@use '../common/variables'; // кольори, шрифти, відступи
-@use '../common/mixins';    // flex-center, respond-to, transition тощо
+@use '../common/variables' as v; // кольори, шрифти, відступи
+@use '../common/mixins' as m;    // flex-center, respond-to, transition тощо
 
 header {
   width: 100%;
   margin: 0 auto;
-  background-color: $primary-color;           // фон — основний синій колір
+  background-color: v.$primary-color;           // фон — основний синій колір
 
   color: #fff;                                // білий текст
   text-align: center;                         // вирівнювання тексту по центру
 
   h1 {
-    font-family: $font-family-base;           // базовий шрифт
-    font-size: $font-size-base * 2;           // великий розмір шрифту
-    font-weight: $heading-font-weight;        // жирний шрифт
-    margin-top: $spacing-unit;                // відступ зверху
-    margin-bottom: $spacing-unit;             // відступ знизу
+    font-family: v.$font-family-base;           // базовий шрифт
+    font-size: v.$font-size-base * 2;           // великий розмір шрифту
+    font-weight: v.$heading-font-weight;        // жирний шрифт
+    margin-top: v.$spacing-unit;                // відступ зверху
+    margin-bottom: v.$spacing-unit;             // відступ знизу
   }
 
   nav {
@@ -24,21 +24,20 @@ header {
     width: 100%;
     max-width: 1200px;                          // обмежуємо ширину вмісту// стилі для <header>
 
-    @include flex-row;
+    @include m.flex-row;
 
     flex-wrap: nowrap;
 
     ul {
-      @include flex-center;                   // горизонтальне вирівнювання списку
+      @include m.flex-center;                   // горизонтальне вирівнювання списку
 
       li {
         a {
           color: #fff;                        // білий текст
-          font-weight: $body-font-weight;     // стандартна товщина
-          @include transition(color);         // плавний перехід кольору
+          font-weight: v.$body-font-weight;     // стандартна товщина
 
           &:hover {
-            color: color.scale($primary-color, $lightness: 30%); // світліший при наведенні
+            color: color.scale(v.$primary-color, $lightness: 30%); // світліший при наведенні
           }
         }
       }

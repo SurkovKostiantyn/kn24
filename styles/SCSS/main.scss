@@ -1,8 +1,8 @@
 @use "./common/_normalize.scss";
 
 // === COMMON ===
-@use 'common/variables';   // Глобальні змінні (кольори, типографіка, відступи)
-@use 'common/mixins';      // Глобальні міксини (transition, breakpoints, flex-center тощо)
+@use 'common/variables' as v;   // Глобальні змінні (кольори, типографіка, відступи)
+@use 'common/mixins' as m;      // Глобальні міксини (transition, breakpoints, flex-center тощо)
 
 // === ELEMENTS ===
 @use 'elements/buttons';   // Стилі для кнопок
@@ -22,7 +22,7 @@ body {
 }
 
 body {
-  @include flex-column(0);
+  @include m.flex-column(0);
   min-height: 100vh;             // загальна висота body — весь екран
 }
 

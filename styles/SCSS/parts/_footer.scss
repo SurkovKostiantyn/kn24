@@ -1,13 +1,13 @@
 @use "sass:color";
 // Імпортуємо змінні та міксини
-@use '../common/variables'; // кольори, відступи, типографіка
-@use '../common/mixins';    // clearfix, flex-center, respond-to тощо
+@use '../common/variables' as v; // кольори, відступи, типографіка
+@use '../common/mixins' as m;    // clearfix, flex-center, respond-to тощо
 
 footer {                                     // стиль для <footer>
-  @include flex-center;                      // вмикаємо flex і центруємо контент
-  background-color: $secondary-color;        // фон футеру — допоміжний зелений
+  @include m.flex-center;                      // вмикаємо flex і центруємо контент
+  background-color: v.$secondary-color;        // фон футеру — допоміжний зелений
   color: #fff;                               // білий колір тексту
-  padding: $gutter-width $spacing-unit;      // вертикальні та горизонтальні відступи
+  padding: v.$gutter-width v.$spacing-unit;      // вертикальні та горизонтальні відступи
   text-align: center;                        // вирівнювання тексту по центру
-  font-family: $font-family-base;            // базовий шрифт сайта
+  font-family: v.$font-family-base;            // базовий шрифт сайта
 }

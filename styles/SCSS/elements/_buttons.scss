@@ -1,50 +1,49 @@
 @use "sass:color";
 // Імпортуємо змінні для доступу до кольорів, відступів та типографіки
-@use '../common/variables';
+@use '../common/_variables' as v;
 // Імпортуємо міксини для повторного використання CSS-патернів
-@use '../common/mixins';
-
+@use '../common/_mixins' as m;
 
 // Базовий клас кнопки
 .button {
-  @include flex-center;                       // Центруємо вміст кнопки по обох осях
-  padding: $spacing-unit $gutter-width;       // Вертикальні та горизонтальні відступи
-  font-family: $font-family-base;             // Використовуємо базовий шрифт
-  font-size: $font-size-base;                 // Базовий розмір шрифту
-  font-weight: $heading-font-weight;          // Товстіший шрифт для кнопок
+
+  @include m.flex-center;                       // Центруємо вміст кнопки по обох осях
+  padding: v.$spacing-unit v.$gutter-width;       // Вертикальні та горизонтальні відступи
+  font-family: v.$font-family-base;             // Використовуємо базовий шрифт
+  font-size: v.$font-size-base;                 // Базовий розмір шрифту
+  font-weight: v.$heading-font-weight;          // Товстіший шрифт для кнопок
   color: #fff;                                 // Білий колір тексту кнопки
-  background-color: $primary-color;           // Фон кнопки — основний колір
+  background-color: v.$primary-color;           // Фон кнопки — основний колір
   border: none;                                // Без обводки за замовчуванням
-  border-radius: $border-radius;              // Скруглення кутів
+  border-radius: v.$border-radius;              // Скруглення кутів
   cursor: pointer;                             // Курсор «рука» при наведенні
   text-decoration: none;                       // Без підкреслення для посилань-кнопок
-  @include transition(all);                    // Плавні переходи для всіх властивостей
 
   &:hover {                                    // Стан при наведенні миші
-    background-color:  color.scale($primary-color, $lightness: -10%);; // Трохи темніший фон
+    background-color:  color.scale(v.$primary-color, $lightness: -10%);; // Трохи темніший фон
   }
 
   &:focus {                                    // Стан при фокусі (TAB, клік)
-    outline: 2px solid color.scale($primary-color, $lightness: 20%); // Окреслення для доступності
+    outline: 2px solid color.scale(v.$primary-color, $lightness: 20%); // Окреслення для доступності
     outline-offset: 2px;                       // Відступ між полем і окресленням
   }
 
   &:active {                                   // Стан при натисканні
-    background-color: color.scale($primary-color, $lightness: 10%); // Трохи світліший фон
+    background-color: color.scale(v.$primary-color, $lightness: 10%); // Трохи світліший фон
   }
 
   &--secondary {                              // Модифікатор для вторинної кнопки
-    background-color: $secondary-color;       // Використовуємо допоміжний зелений
-    &:hover { background-color:  color.scale($secondary-color, $lightness: -10%); } //
-    &:active { background-color: color.scale($secondary-color, $lightness: 10%); }
+    background-color: v.$secondary-color;       // Використовуємо допоміжний зелений
+    &:hover { background-color:  color.scale(v.$secondary-color, $lightness: -10%); } //
+    &:active { background-color: color.scale(v.$secondary-color, $lightness: 10%); }
   }
 
   &--outline {                                // Модифікатор для кнопки-з обводкою
     background-color: transparent;            // Прозорий фон
-    color: $primary-color;                    // Колір тексту — основний
-    border: 2px solid $primary-color;         // Обводка основним кольором
+    color: v.$primary-color;                    // Колір тексту — основний
+    border: 2px solid v.$primary-color;         // Обводка основним кольором
     &:hover {                                 // Наведення на outline-кнопку
-      background-color: $primary-color;
+      background-color: v.$primary-color;
       color: #fff;                            // Білий текст на темному фоні
     }
   }
@@ -52,7 +51,7 @@
   &--disabled {                               // Модифікатор для неактивної кнопки
     background-color: gray;                   // Сірий фон
     cursor: not-allowed;                      // Курсор «заборонено»
-    opacity: 0.6;                             // Напівпрозорість
+    opacity: 0.5;                             // Напівпрозорість
     pointer-events: none;                     // Вимикаємо події миші
   }
 }

@@ -1,33 +1,32 @@
 @use "sass:color";
 // Імпортуємо змінні для доступу до кольорів, відступів та типографіки
-@use '../common/variables';   // змінні ($primary-color, $spacing-unit тощо)
-@use '../common/mixins';      // міксини (transition, respond-to тощо)
+@use '../common/_variables' as v;   // змінні ($primary-color, $spacing-unit тощо)
+@use '../common/_mixins' as m;      // міксини (transition, respond-to тощо)
 
 // Базовий стиль для текстових полів, textarea та select
 .input,
 textarea,
 select {
-  font-family: $font-family-base;               // використовуємо базовий шрифт
-  font-size: $font-size-base;                   // базовий розмір шрифту
-  color: $text-color;                           // колір тексту з palette
+  font-family: v.$font-family-base;               // використовуємо базовий шрифт
+  font-size: v.$font-size-base;                   // базовий розмір шрифту
+  color: v.$text-color;                           // колір тексту з palette
   background-color: #fff;                       // білий фон полів
-  padding: $spacing-unit $gutter-width;         // вертикальні та горизонтальні відступи
-  border: 1px solid color.scale($text-color, $lightness: 60%);  // світла обводка
-  border-radius: $border-radius-sm;             // маленьке скруглення кутів
+  padding: v.$spacing-unit v.$gutter-width;         // вертикальні та горизонтальні відступи
+  border: 1px solid color.scale(v.$text-color, $lightness: 60%);  // світла обводка
+  border-radius: v.$border-radius-sm;             // маленьке скруглення кутів
   width: 100%;                                  // поле на всю ширину контейнера
   box-sizing: border-box;                       // включає padding/бордер у загальну ширину
-  margin-bottom: $spacing-unit;                 // відступ знизу між полями
-  @include transition(border-color);            // плавний перехід обводки
+  margin-bottom: v.$spacing-unit;                 // відступ знизу між полями
 
   &:focus {
     outline: none;                              // прибираємо дефолтний outline
-    border-color: $primary-color;               // обводка основним кольором при фокусі
-    box-shadow: 0 0 0 3px rgba($primary-color, 0.2); // фокус-кільце з прозорістю
+    border-color: v.$primary-color;               // обводка основним кольором при фокусі
+    box-shadow: 0 0 0 3px rgba(v.$primary-color, 0.2); // фокус-кільце з прозорістю
   }
 
   &--error {
-    border-color: $accent-color;                // обводка для стану "помилка"
-    color: $accent-color;                       // (за потреби) колір тексту помилки
+    border-color: v.$accent-color;                // обводка для стану "помилка"
+    color: v.$accent-color;                       // (за потреби) колір тексту помилки
   }
 }
 
