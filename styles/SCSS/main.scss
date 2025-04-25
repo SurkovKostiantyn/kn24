@@ -1,17 +1,17 @@
-@import "./common/_normalize.scss";
+@use "./common/_normalize.scss";
 
 // === COMMON ===
-@import 'common/variables';   // Глобальні змінні (кольори, типографіка, відступи)
-@import 'common/mixins';      // Глобальні міксини (transition, breakpoints, flex-center тощо)
+@use 'common/variables';   // Глобальні змінні (кольори, типографіка, відступи)
+@use 'common/mixins';      // Глобальні міксини (transition, breakpoints, flex-center тощо)
 
 // === ELEMENTS ===
-@import 'elements/buttons';   // Стилі для кнопок
-@import 'elements/inputs';    // Стилі для input, textarea, select
+@use 'elements/buttons';   // Стилі для кнопок
+@use 'elements/inputs';    // Стилі для input, textarea, select
 
 // === PARTS ===
-@import 'parts/header';       // Стилізація <header>
-@import 'parts/main';         // Стилізація <main> та секцій
-@import 'parts/footer';       // Стилізація <footer>
+@use 'parts/header';       // Стилізація <header>
+@use 'parts/main';         // Стилізація <main> та секцій
+@use 'parts/footer';       // Стилізація <footer>
 
 html,
 body {

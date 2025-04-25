@@ -1,8 +1,8 @@
 @use "sass:color";
 // Імпортуємо змінні для доступу до кольорів, відступів та типографіки
-@import '../common/variables';
+@use '../common/variables';
 // Імпортуємо міксини для повторного використання CSS-патернів
-@import '../common/mixins';
+@use '../common/mixins';
 
 
 // Базовий клас кнопки

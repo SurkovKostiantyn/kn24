@@ -1,7 +1,7 @@
 @use "sass:color";
 // Імпортуємо змінні та міксини
-@import '../common/variables'; // кольори, шрифти, відступи
-@import '../common/mixins';    // flex-center, respond-to, transition тощо
+@use '../common/variables'; // кольори, шрифти, відступи
+@use '../common/mixins';    // flex-center, respond-to, transition тощо
 
 header {
   width: 100%;

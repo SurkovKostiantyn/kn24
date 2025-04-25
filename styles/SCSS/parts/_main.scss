@@ -1,7 +1,7 @@
 @use "sass:color";
 // Імпортуємо змінні та міксини
-@import '../common/variables';  // кольори, типографіка, брейкпойнти
-@import '../common/mixins';     // flex-center, respond-to, transition тощо
+@use '../common/variables';  // кольори, типографіка, брейкпойнти
+@use '../common/mixins';     // flex-center, respond-to, transition тощо
 
 
 main {
